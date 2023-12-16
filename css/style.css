@@ -18,9 +18,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -53,9 +53,9 @@ body {
   display: flex;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 335px;
 }
 .header__wrapper .header__nav .nav__list {
@@ -276,6 +276,10 @@ body {
   overflow: hidden;
   width: 270px;
   background: #D9D9D9;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card:hover {
   -webkit-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.2509803922);
           box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }

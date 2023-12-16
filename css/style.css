@@ -726,6 +726,10 @@ footer .footer__container .footer__contacts .footer__form button:hover {
 .food .food__container .food__card .food__image {
   width: 100%;
   height: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.food .food__container .food__card .food__image:hover {
   -webkit-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.2509803922);
           box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
@@ -750,6 +754,10 @@ footer .footer__container .footer__contacts .footer__form button:hover {
   background: #D9D9D9;
   padding: 1px 10px 12px 1px;
   border-radius: 0px 0px 30px 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.food .food__container .food__card .food__discription:hover {
   -webkit-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.2509803922);
           box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }

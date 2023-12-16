@@ -92,6 +92,8 @@ body {
   -webkit-transform: translate(0px, 25px);
           transform: translate(0px, 25px);
   opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .header__wrapper .header__nav .nav__list .nav__item a:hover:before {
   opacity: 1;
@@ -107,12 +109,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .header__wrapper .header__nav .nav__search img:hover {
-  position: relative;
-  bottom: 3px;
+  -webkit-transform: translate(0px, -3px);
+          transform: translate(0px, -3px);
 }
 
 .main {
@@ -485,8 +488,8 @@ footer .footer__container .footer__socials .socials__items img {
   transition: all 0.3s ease;
 }
 footer .footer__container .footer__socials .socials__items img:hover {
-  position: relative;
-  bottom: 3px;
+  -webkit-transform: translate(0px, -3px);
+          transform: translate(0px, -3px);
 }
 footer .footer__container .footer__contacts {
   margin-top: 39px;

@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-  max-width: 87.5%;
+  width: 100%;
+  padding: 0 49px;
   margin: 0 auto;
 }
 
@@ -38,7 +39,6 @@ body {
   gap: 0px;
 }
 .header__wrapper .logo .logo__text {
-  font-family: Inter;
   font-size: 36px;
   font-style: italic;
   font-weight: 600;
@@ -72,14 +72,30 @@ body {
   gap: 49px;
 }
 .header__wrapper .header__nav .nav__list .nav__item {
-  font-family: Inter;
   font-size: 20px;
   font-style: italic;
   font-weight: 600;
   line-height: normal;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .header__wrapper .header__nav .nav__list .nav__item a {
   color: #000;
+}
+.header__wrapper .header__nav .nav__list .nav__item a:before {
+  content: "";
+  position: absolute;
+  padding: 1px;
+  width: 1px;
+  background: #000;
+  -webkit-transform: translate(0px, 25px);
+          transform: translate(0px, 25px);
+  opacity: 0;
+}
+.header__wrapper .header__nav .nav__list .nav__item a:hover:before {
+  opacity: 1;
+  width: 100%;
 }
 .header__wrapper .header__nav .nav__search {
   display: -webkit-box;
@@ -91,6 +107,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__wrapper .header__nav .nav__search img:hover {
+  position: relative;
+  bottom: 3px;
 }
 
 .main {
@@ -106,9 +128,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 49px;
 }
 .main .main__container .filter__container {
-  max-width: 90%;
+  max-width: 328px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,7 +182,6 @@ body {
 }
 .main .main__container .filter__container .filter__form .form__input input {
   color: #000;
-  font-family: Inter;
   font-size: 32px;
   font-style: italic;
   font-weight: 200;
@@ -168,6 +190,11 @@ body {
   border: 1px solid #000;
   background: #FFF;
   max-width: 328px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main .main__container .filter__container .filter__form .form__input input:focus {
+  background-color: rgba(255, 255, 255, 0.5921568627);
 }
 .main .main__container .filter__container .filter__form .form__checkbox {
   display: -webkit-box;
@@ -183,8 +210,6 @@ body {
   gap: 15px;
 }
 .main .main__container .filter__container .filter__form .form__checkbox h2 {
-  color: #000;
-  font-family: Inter;
   font-size: 24px;
   font-style: italic;
   font-weight: 300;
@@ -200,8 +225,6 @@ body {
   margin-right: 10px;
 }
 .main .main__container .filter__container .filter__form .form__checkbox p {
-  color: #000;
-  font-family: Inter;
   font-size: 24px;
   font-style: italic;
   font-weight: 300;
@@ -227,8 +250,6 @@ body {
   gap: 46px;
 }
 .main .main__container .recipes .recipes__container .recipes__title {
-  color: #000;
-  font-family: Inter;
   font-size: 40px;
   font-style: italic;
   font-weight: 400;
@@ -240,17 +261,21 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 49px;
 }
 .main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card {
   overflow: hidden;
-  width: 28.7156455555%;
+  width: 289px;
   background: #D9D9D9;
   -webkit-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.2509803922);
           box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card .card__image {
+.main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card .card__image img {
   width: 100%;
+  height: auto;
 }
 .main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card .card__item {
   display: -webkit-box;
@@ -262,7 +287,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  gap: 4%;
+  gap: 3%;
 }
 .main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card .card__item .card__time {
   display: -webkit-box;
@@ -276,8 +301,6 @@ body {
           justify-content: space-between;
 }
 .main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card .card__item .card__time .card__min {
-  color: #000;
-  font-family: Inter;
   font-size: 20px;
   font-style: italic;
   font-weight: 700;
@@ -297,19 +320,17 @@ body {
 .main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card .card__item .card__levels .card__level {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  color: #000;
-  font-family: Inter;
   font-size: 24px;
   font-style: italic;
   font-weight: 300;
   line-height: normal;
 }
 .main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card .card__item .card__levels img {
+  width: 37px;
+  height: 37px;
   padding-bottom: 4%;
 }
 .main .main__container .recipes .recipes__container .recipes__wrapper .recipes__card .card__discription {
-  color: #000;
-  font-family: Inter;
   font-size: 24px;
   font-style: italic;
   font-weight: 700;
@@ -331,7 +352,6 @@ body {
           align-items: center;
 }
 .buttons .buttons__item button {
-  font-family: Inter;
   font-size: 32px;
   font-style: italic;
   font-weight: 400;
@@ -340,6 +360,11 @@ body {
   text-align: left;
   background: #9B9B9B;
   padding: 18px 100px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.buttons .buttons__item button:hover {
+  background: #5A5959;
 }
 
 footer {
@@ -418,7 +443,24 @@ footer .footer__container .footer__navigation .footer__nav .nav__list .nav__item
   text-align: left;
 }
 footer .footer__container .footer__navigation .footer__nav .nav__list .nav__item a {
+  position: relative;
   color: #000;
+}
+footer .footer__container .footer__navigation .footer__nav .nav__list .nav__item a:before {
+  content: "";
+  position: absolute;
+  padding: 1px;
+  width: 1px;
+  background: #000;
+  -webkit-transform: translate(0px, 25px);
+          transform: translate(0px, 25px);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+footer .footer__container .footer__navigation .footer__nav .nav__list .nav__item a:hover:before {
+  opacity: 1;
+  width: 100%;
 }
 footer .footer__container .footer__socials .socials__items {
   display: -webkit-box;
@@ -437,6 +479,14 @@ footer .footer__container .footer__socials .socials__items {
   -ms-flex-item-align: end;
       align-self: flex-end;
   gap: 49px;
+}
+footer .footer__container .footer__socials .socials__items img {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+footer .footer__container .footer__socials .socials__items img:hover {
+  position: relative;
+  bottom: 3px;
 }
 footer .footer__container .footer__contacts {
   margin-top: 39px;
@@ -504,6 +554,11 @@ footer .footer__container .footer__contacts .footer__form input {
   line-height: 29px;
   letter-spacing: 0em;
   text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+footer .footer__container .footer__contacts .footer__form input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.459);
 }
 footer .footer__container .footer__contacts .footer__form button {
   padding: 12px;
@@ -515,6 +570,11 @@ footer .footer__container .footer__contacts .footer__form button {
   line-height: 29px;
   letter-spacing: 0em;
   text-align: left;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+footer .footer__container .footer__contacts .footer__form button:hover {
+  background: #797979;
 }
 
 .national {
@@ -550,7 +610,6 @@ footer .footer__container .footer__contacts .footer__form button {
   gap: 46px;
 }
 .national .national__container .national__content .national__title {
-  font-family: Inter;
   font-size: 40px;
   font-style: italic;
   font-weight: 400;
@@ -574,7 +633,6 @@ footer .footer__container .footer__contacts .footer__form button {
   max-width: 326px;
   background: white;
   border: 1px solid #000000;
-  font-family: Inter;
   font-size: 32px;
   font-style: italic;
   font-weight: 100;
@@ -582,6 +640,11 @@ footer .footer__container .footer__contacts .footer__form button {
   letter-spacing: 0em;
   text-align: left;
   padding: 7px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.national .national__container .national__content .national__form input:focus {
+  background-color: rgba(255, 255, 255, 0.5176470588);
 }
 .national .national__container .national__content .national__form button {
   background: #9B9B9B;
@@ -594,6 +657,11 @@ footer .footer__container .footer__contacts .footer__form button {
   letter-spacing: 0em;
   text-align: left;
   padding: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.national .national__container .national__content .national__form button:hover {
+  background-color: #707070;
 }
 .national .national__container .national__discription {
   background-color: rgba(255, 255, 255, 0.3647058824);
@@ -602,7 +670,6 @@ footer .footer__container .footer__contacts .footer__form button {
   padding: 12px 6px;
 }
 .national .national__container .national__discription p {
-  font-family: Inter;
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
@@ -677,7 +744,6 @@ footer .footer__container .footer__contacts .footer__form button {
           box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 .food .food__container .food__card .food__discription .food__kitchen {
-  font-family: Inter;
   font-size: 24px;
   font-style: italic;
   font-weight: 600;
@@ -686,7 +752,6 @@ footer .footer__container .footer__contacts .footer__form button {
   text-align: left;
 }
 .food .food__container .food__card .food__discription .food__num {
-  font-family: Inter;
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
@@ -731,7 +796,6 @@ footer .footer__container .footer__contacts .footer__form button {
           justify-content: space-between;
 }
 .traditional .traditional__container .traditional__re .traditional__title {
-  font-family: Inter;
   font-size: 32px;
   font-style: italic;
   font-weight: 400;
@@ -753,7 +817,6 @@ footer .footer__container .footer__contacts .footer__form button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: Inter;
   font-size: 32px;
   font-style: italic;
   font-weight: 200;
